@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ŽalbaAI – Napiši savršenu žalbu za 30 sekundi</title>
+  <meta name="description" content="ŽalbaAI automatski piše profesionalne žalbe, molbe i dopise prilagođene Hrvatskoj, BiH i Srbiji." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <!-- Page wrapper -->
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <header class="border-b border-slate-800/60 bg-slate-950/80 backdrop-blur z-20 sticky top-0">
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <div class="flex items-center gap-2">
+          <div class="h-9 w-9 rounded-2xl bg-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/30">
+            <span class="text-xl font-bold">Ž</span>
+          </div>
+          <span class="font-semibold text-lg tracking-tight">ŽalbaAI</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#kako-radi" class="hover:text-primary-300 transition-colors">Kako radi</a>
+          <a href="#prednosti" class="hover:text-primary-300 transition-colors">Prednosti</a>
+          <a href="#cijene" class="hover:text-primary-300 transition-colors">Cijene</a>
+          <a href="#faq" class="hover:text-primary-300 transition-colors">FAQ</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <button class="text-sm px-3 py-1.5 rounded-xl border border-slate-700 hover:border-slate-500 hover:bg-slate-900 transition">
+            Prijava
+          </button>
+          <a href="#cta-start" class="text-sm px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-700 shadow-md shadow-primary-600/40 font-medium transition">
+            Pokreni besplatno
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="flex-1">
+      <!-- Hero -->
+      <section class="relative overflow-hidden">
+        <div class="pointer-events-none absolute -top-40 -left-40 h-80 w-80 rounded-full bg-primary-600/30 blur-3xl opacity-30"></div>
+        <div class="pointer-events-none absolute top-10 right-0 h-72 w-72 rounded-full bg-primary-500/20 blur-3xl opacity-40"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-20 lg:pb-24 grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-primary-500/40 bg-primary-500/10 px-3 py-1 text-xs font-medium text-primary-200 mb-4">
+              <span class="text-base">⚖️</span>
+              <span>AI asistent za žalbe, molbe i dopise</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-50">
+              Napiši savršenu žalbu za
+              <span class="text-primary-400">30 sekundi.</span><br class="hidden sm:block" />
+              Bez advokata.
+            </h1>
+
+            <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl">
+              ŽalbaAI je online asistent koji ti na osnovu par informacija automatski napiše profesionalnu
+              žalbu, molbu ili dopis – prilagođen tvojoj državi i situaciji.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3" id="cta-start">
+              <a href="#kako-radi" class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-primary-600 hover:bg-primary-700 text-sm font-semibold shadow-lg shadow-primary-600/40 transition">
+                📄 Napiši svoju prvu žalbu besplatno
+              </a>
+              <a href="#primjeri" class="inline-flex items-center justify-center px-6 py-3 rounded-2xl border border-slate-700 hover:border-slate-500 text-sm font-medium text-slate-100 bg-slate-900/60 hover:bg-slate-900 transition">
+                👀 Pogledaj primjere dopisa
+              </a>
+            </div>
+
+            <p class="mt-3 text-xs text-slate-400">
+              Nije pravni savjet. Ali je 100× bolje od copy-paste šablona sa interneta.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-4 max-w-md text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-2">
+                <span class="mt-0.5">✅</span>
+                <span>Prilagođeno Hrvatskoj, BiH i Srbiji</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="mt-0.5">✅</span>
+                <span>Idealno za kazne, banke i poslodavce</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="mt-0.5">✅</span>
+                <span>Profesionalan ton bez muke</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="mt-0.5">✅</span>
+                <span>Free plan bez kartice</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right hero panel / mockup -->
+          <div class="relative">
+            <div class="rounded-3xl border border-slate-800 bg-slate-900/80 backdrop-blur shadow-2xl shadow-primary-900/40 p-4 sm:p-5 max-w-md ml-auto">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <p class="text-xs uppercase tracking-wide text-slate-400">Demo</p>
+                  <p class="text-sm font-semibold">Kreiranje žalbe</p>
+                </div>
+                <span class="px-2.5 py-1 text-[10px] rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+                  AI generisano
+                </span>
+              </div>
+
+              <div class="space-y-3 text-xs">
+                <div>
+                  <label class="block text-slate-400 mb-1">Tip dopisa</label>
+                  <div class="flex gap-2">
+                    <span class="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[11px]">Žalba na kaznu</span>
+                    <span class="px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px]">Banka</span>
+                    <span class="px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px]">Poslodavac</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-slate-400 mb-1">Država</label>
+                    <div class="px-2 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-[11px]">
+                      Hrvatska 🇭🇷
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-slate-400 mb-1">Ton</label>
+                    <div class="flex gap-1.5">
+                      <span class="px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px]">Pristojno</span>
+                      <span class="px-2 py-1 rounded-lg bg-slate-800 border border-slate-600 text-[11px]">Odlučno</span>
+                      <span class="px-2 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px]">Vrlo oštro</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-slate-400 mb-1">Tvoj problem (sažeto)</label>
+                  <div class="rounded-xl bg-slate-950 border border-slate-800 px-3 py-2 text-[11px] text-slate-300">
+                    Dobio sam kaznu za parkiranje, ali znak nije bio jasno istaknut. Želim tražiti poništenje kazne.
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-slate-400 mb-1">Generirani uvod žalbe</label>
+                  <div class="rounded-xl bg-slate-950 border border-primary-700/60 px-3 py-2 text-[11px] text-slate-100">
+                    Poštovani,<br />
+                    ovim putem ulažem <span class="font-semibold">žalbu na izrečenu kaznu za parkiranje</span>, broj
+                    rješenja ________, izdanu dana ________. Smatram da je kazna neosnovano izrečena iz razloga što
+                    na predmetnoj lokaciji nije bilo jasno i vidljivo istaknutog znaka zabrane parkiranja...
+                  </div>
+                </div>
+
+                <button class="w-full mt-2 text-xs font-semibold rounded-xl bg-primary-600 hover:bg-primary-700 py-2.5 shadow shadow-primary-700/50 transition">
+                  Generiši cijeli dopis
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem section -->
+      <section class="border-t border-slate-800/80 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+          <div class="grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">
+                Pisanje žalbi je horor. Znaš to i ti.
+              </h2>
+              <p class="mt-4 text-slate-300 text-sm sm:text-base">
+                Dobiješ kaznu, nepravdu na poslu, problem s bankom ili državom… i onda počinje drama:
+              </p>
+              <ul class="mt-3 space-y-2 text-slate-300 text-sm">
+                <li class="flex gap-2">
+                  <span>•</span><span>“Kako se ovo uopće piše?”</span>
+                </li>
+                <li class="flex gap-2">
+                  <span>•</span><span>“Koje fraze trebam koristiti?”</span>
+                </li>
+                <li class="flex gap-2">
+                  <span>•</span><span>“Šta ako zvuči neozbiljno?”</span>
+                </li>
+                <li class="flex gap-2">
+                  <span>•</span><span>“Hoće li me uopće shvatiti ozbiljno?”</span>
+                </li>
+              </ul>
+              <p class="mt-4 text-slate-300 text-sm sm:text-base">
+                Na kraju ili odustaneš, ili šalješ loše sročenu žalbu, ili plaćaš skupe odvjetnike / advokate za
+                jednostavan dopis.
+              </p>
+              <p class="mt-3 text-slate-200 font-medium text-sm sm:text-base">
+                Postoji bolji način.
+              </p>
+            </div>
+            <div class="md:border-l border-slate-800 md:pl-8">
+              <h3 class="text-sm font-semibold text-slate-200 uppercase tracking-wide mb-3">
+                Tipične situacije u kojima se nađeš
+              </h3>
+              <div class="space-y-3 text-sm text-slate-300">
+                <p>• Kazne za parkiranje, prometne prekršaje i komunalne kazne.</p>
+                <p>• Problemi s bankom, kamatama, naknadama i pogrešnim zaduženjima.</p>
+                <p>• Nepravde na poslu – opomene, smanjenje plaće, nezakoniti postupci.</p>
+                <p>• Rješenja škole, fakulteta, općine, porezne i drugih institucija.</p>
+              </div>
+              <div class="mt-5 rounded-2xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-xs sm:text-sm text-amber-100">
+                Umjesto da gubiš živce nad praznim Word dokumentom, prepusti AI-ju da odradi “težak dio” – strukturu,
+                fraze i ton.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solution / How it works -->
+      <section id="kako-radi" class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">
+              Uneseš problem → dobiješ spreman dopis
+            </h2>
+            <p class="mt-3 text-slate-300 text-sm sm:text-base">
+              ŽalbaAI ti u nekoliko koraka generiše dopis kao da ga je pisala pravna služba.
+            </p>
+          </div>
+
+          <div class="mt-10 grid md:grid-cols-3 gap-6">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-semibold text-primary-300 uppercase tracking-wide">Korak 1</span>
+                <span class="text-lg">✍️</span>
+              </div>
+              <h3 class="text-sm font-semibold mb-2">Opišeš problem</h3>
+              <p class="text-sm text-slate-300">
+                Upišeš šta se desilo i šta želiš postići (poništenje kazne, povrat novca, ispravku odluke…).
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-semibold text-primary-300 uppercase tracking-wide">Korak 2</span>
+                <span class="text-lg">🤖</span>
+              </div>
+              <h3 class="text-sm font-semibold mb-2">AI složi dopis za tebe</h3>
+              <p class="text-sm text-slate-300">
+                Na osnovu unosa, ŽalbaAI generiše dopis s jasnom strukturom i odgovarajućim tonom, prilagođen državnoj
+                praksi.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-semibold text-primary-300 uppercase tracking-wide">Korak 3</span>
+                <span class="text-lg">📤</span>
+              </div>
+              <h3 class="text-sm font-semibold mb-2">Preuzmeš i pošalješ</h3>
+              <p class="text-sm text-slate-300">
+                Kopiraš tekst, izvezeš u PDF ili printaš – i šalješ e-mailom, poštom ili predaješ lično.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a href="#cijene" class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-primary-600 hover:bg-primary-700 text-sm font-semibold shadow shadow-primary-700/50 transition">
+              Isprobaj besplatno – bez kartice, bez registracije
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section id="prednosti" class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">
+              Zašto koristiti ŽalbaAI?
+            </h2>
+          </div>
+
+          <div class="mt-10 grid md:grid-cols-3 gap-6">
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 class="text-sm font-semibold mb-2">Lokaliziran za regiju</h3>
+              <p class="text-sm text-slate-300">
+                Jezik, stil i forma prilagođeni praksi u Hrvatskoj, BiH i Srbiji.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 class="text-sm font-semibold mb-2">Profesionalan ton bez muke</h3>
+              <p class="text-sm text-slate-300">
+                Zvučiš ozbiljno i kompetentno, čak i ako prvi put pišeš takav dopis.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 class="text-sm font-semibold mb-2">Brže od guglanja šablona</h3>
+              <p class="text-sm text-slate-300">
+                Zaboravi nasumične PDF-ove i forume – dobijaš konkretan tekst za svoju situaciju.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 class="text-sm font-semibold mb-2">Uvijek možeš uređivati</h3>
+              <p class="text-sm text-slate-300">
+                Generirani dopis možeš izmijeniti, dodati lične detalje i potpis.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 class="text-sm font-semibold mb-2">Puno jeftinije od odvjetnika</h3>
+              <p class="text-sm text-slate-300">
+                Za jednostavne stvari nema potrebe da odmah plaćaš pravnu pomoć.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h3 class="text-sm font-semibold mb-2">Stalno učenje</h3>
+              <p class="text-sm text-slate-300">
+                Sistem se vremenom poboljšava na osnovu povratnih informacija korisnika.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="cijene" class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">
+              Jedna dobra žalba vrijedi više od cijene kave.
+            </h2>
+          </div>
+
+          <div class="mt-10 grid md:grid-cols-3 gap-6">
+            <!-- Free -->
+            <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 flex flex-col">
+              <h3 class="text-sm font-semibold text-slate-200">FREE</h3>
+              <p class="mt-1 text-2xl font-bold text-slate-50">0 €</p>
+              <p class="text-xs text-slate-400 mb-4">zauvijek</p>
+              <ul class="mt-2 space-y-2 text-sm text-slate-300">
+                <li>• 1 dopis dnevno</li>
+                <li>• Osnovni šabloni</li>
+                <li>• Osnovan ton i struktura</li>
+              </ul>
+              <p class="mt-3 text-xs text-slate-400 flex-1">Idealno da probaš.</p>
+              <button class="mt-4 w-full text-sm font-semibold rounded-xl border border-slate-700 hover:border-slate-500 py-2.5 bg-slate-900 hover:bg-slate-800 transition">
+                Započni s FREE planom
+              </button>
+            </div>
+
+            <!-- Standard -->
+            <div class="rounded-3xl border-2 border-primary-500 bg-slate-900/90 p-6 shadow-xl shadow-primary-900/50 flex flex-col relative">
+              <div class="absolute -top-3 right-4 text-[10px] px-2 py-1 rounded-full bg-primary-500 text-slate-950 font-semibold">
+                Najpopularnije
+              </div>
+              <h3 class="text-sm font-semibold text-slate-50">STANDARD</h3>
+              <p class="mt-1 text-2xl font-bold text-slate-50">9 €</p>
+              <p class="text-xs text-slate-400 mb-4">mjesečno</p>
+              <ul class="mt-2 space-y-2 text-sm text-slate-200">
+                <li>• Do 20 dopisa mjesečno</li>
+                <li>• Napredne strukture (banke, poslodavci, institucije)</li>
+                <li>• Više stilova pisanja</li>
+                <li>• Prioritetne nadogradnje</li>
+              </ul>
+              <p class="mt-3 text-xs text-slate-400 flex-1">
+                Za privatne osobe i freelancere.
+              </p>
+              <button class="mt-4 w-full text-sm font-semibold rounded-xl bg-primary-600 hover:bg-primary-700 py-2.5 shadow shadow-primary-700/60 transition">
+                Kreni sa STANDARD planom
+              </button>
+            </div>
+
+            <!-- Pro -->
+            <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 flex flex-col">
+              <h3 class="text-sm font-semibold text-slate-200">PRO</h3>
+              <p class="mt-1 text-2xl font-bold text-slate-50">19 €</p>
+              <p class="text-xs text-slate-400 mb-4">mjesečno</p>
+              <ul class="mt-2 space-y-2 text-sm text-slate-300">
+                <li>• Neograničen broj dopisa</li>
+                <li>• Višekorisnički pristup (mala firma / udruga)</li>
+                <li>• Prioritetna podrška</li>
+                <li>• Prilagođeni šabloni na zahtjev</li>
+              </ul>
+              <p class="mt-3 text-xs text-slate-400 flex-1">
+                Za knjigovodstvene servise, agencije, udruge.
+              </p>
+              <button class="mt-4 w-full text-sm font-semibold rounded-xl border border-slate-700 hover:border-slate-500 py-2.5 bg-slate-900 hover:bg-slate-800 transition">
+                Zatraži PRO pristup
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">
+              Česta pitanja
+            </h2>
+          </div>
+
+          <div class="mt-10 space-y-4">
+            <details class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="text-sm font-medium text-slate-100">
+                  Je li ŽalbaAI zamjena za odvjetnika / advokata?
+                </span>
+                <span class="ml-4 text-slate-400 group-open:rotate-180 transition-transform">⌄</span>
+              </summary>
+              <p class="mt-3 text-sm text-slate-300">
+                Ne. ŽalbaAI nije pravni savjet i ne zamjenjuje odvjetnika / advokata. To je alat koji ti pomaže da
+                brže i jasnije napišeš dopis. Za kompleksne slučajeve uvijek se posavjetuj s pravnim stručnjakom.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="text-sm font-medium text-slate-100">
+                  Je li moj sadržaj siguran?
+                </span>
+                <span class="ml-4 text-slate-400 group-open:rotate-180 transition-transform">⌄</span>
+              </summary>
+              <p class="mt-3 text-sm text-slate-300">
+                Da. Tekst koji uneseš koristi se samo za generisanje tvog dokumenta. Ne dijelimo ga s trećim stranama,
+                niti ga objavljujemo.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="text-sm font-medium text-slate-100">
+                  Mogu li uređivati tekst nakon generisanja?
+                </span>
+                <span class="ml-4 text-slate-400 group-open:rotate-180 transition-transform">⌄</span>
+              </summary>
+              <p class="mt-3 text-sm text-slate-300">
+                Naravno. Generirani tekst je polazna tačka – možeš ga dodatno prilagoditi prije slanja.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="text-sm font-medium text-slate-100">
+                  Da li podržavate sve države?
+                </span>
+                <span class="ml-4 text-slate-400 group-open:rotate-180 transition-transform">⌄</span>
+              </summary>
+              <p class="mt-3 text-sm text-slate-300">
+                Trenutno se fokusiramo na Hrvatsku, Bosnu i Hercegovinu i Srbiju. Vremenom ćemo dodavati nove države
+                prema interesu korisnika.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="text-sm font-medium text-slate-100">
+                  Treba li mi kreditna kartica za probu?
+                </span>
+                <span class="ml-4 text-slate-400 group-open:rotate-180 transition-transform">⌄</span>
+              </summary>
+              <p class="mt-3 text-sm text-slate-300">
+                Ne. Free verziju možeš koristiti bez kartice, samo da vidiš kako alat radi.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 text-center">
+          <h2 class="text-2xl sm:text-3xl font-semibold text-slate-50">
+            Nemaš što izgubiti – osim loše napisane žalbe.
+          </h2>
+          <p class="mt-3 text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
+            Isprobaj ŽalbaAI sada, napiši svoj prvi dopis za manje od minute i vidi koliko bolje zvuči kad te AI
+            “pokrije” frazama i strukturom.
+          </p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+            <button class="px-6 py-3 rounded-2xl bg-primary-600 hover:bg-primary-700 text-sm font-semibold shadow shadow-primary-700/60 transition">
+              📄 Pokreni ŽalbaAI besplatno
+            </button>
+            <button class="px-6 py-3 rounded-2xl border border-slate-700 hover:border-slate-500 bg-slate-900 hover:bg-slate-800 text-sm font-medium transition">
+              👀 Pogledaj primjer generirane žalbe
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+        <p>© <span id="year"></span> ŽalbaAI. Sva prava pridržana.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-slate-300 transition">Uvjeti korištenja</a>
+          <a href="#" class="hover:text-slate-300 transition">Politika privatnosti</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
